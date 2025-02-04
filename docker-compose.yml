@@ -1,0 +1,29 @@
+services:
+  mongo:
+    image: mongo:8.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - ./mongo-data:/data/db
+
+volumes:
+  mongo-data:
+
+  
+# services:
+#   tiendaOnline-db:
+#     container_name: tienda
+#     image: postgres:17
+#     restart: always
+#     volumes:
+#       - ./postgres:/var/lib/postgresql/data
+#     ports:
+#       - 5432:5432
+#     environment:
+#       POSTGRES_USER: ${DB_USER}
+#       POSTGRES_PASSWORD: ${DB_PASSWORD}
+#       POSTGRES_DB: ${DB_NAME}
