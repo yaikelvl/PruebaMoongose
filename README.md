@@ -23,3 +23,8 @@ docker-compose up -d
 ```
 yarn start:dev
 ```
+
+7. Interactuar usando Postman u otra herramienta de desarrollo y prueba de APIs por el URL:
+```
+https://localhost:3000/api
+```
